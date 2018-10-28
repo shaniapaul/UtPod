@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Shania Paul/Documents/Shania/EE312/Lab 5/Song.h
+string
+-
+
+C:/Users/Shania Paul/Documents/Shania/EE312/Lab 5/UtPod.cpp
+UtPod.h
+C:/Users/Shania Paul/Documents/Shania/EE312/Lab 5/UtPod.h
+Song.h
+C:/Users/Shania Paul/Documents/Shania/EE312/Lab 5/Song.h
+
+C:/Users/Shania Paul/Documents/Shania/EE312/Lab 5/UtPod.h
+Song.h
+C:/Users/Shania Paul/Documents/Shania/EE312/Lab 5/Song.h
+

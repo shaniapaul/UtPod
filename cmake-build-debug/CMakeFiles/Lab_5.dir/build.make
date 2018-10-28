@@ -56,32 +56,62 @@ include CMakeFiles/Lab_5.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Lab_5.dir/flags.make
 
-CMakeFiles/Lab_5.dir/main.cpp.obj: CMakeFiles/Lab_5.dir/flags.make
-CMakeFiles/Lab_5.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab_5.dir/main.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab_5.dir\main.cpp.obj -c "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\main.cpp"
+CMakeFiles/Lab_5.dir/UtPod.cpp.obj: CMakeFiles/Lab_5.dir/flags.make
+CMakeFiles/Lab_5.dir/UtPod.cpp.obj: ../UtPod.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab_5.dir/UtPod.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab_5.dir\UtPod.cpp.obj -c "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\UtPod.cpp"
 
-CMakeFiles/Lab_5.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_5.dir/main.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\main.cpp" > CMakeFiles\Lab_5.dir\main.cpp.i
+CMakeFiles/Lab_5.dir/UtPod.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_5.dir/UtPod.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\UtPod.cpp" > CMakeFiles\Lab_5.dir\UtPod.cpp.i
 
-CMakeFiles/Lab_5.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_5.dir/main.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\main.cpp" -o CMakeFiles\Lab_5.dir\main.cpp.s
+CMakeFiles/Lab_5.dir/UtPod.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_5.dir/UtPod.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\UtPod.cpp" -o CMakeFiles\Lab_5.dir\UtPod.cpp.s
+
+CMakeFiles/Lab_5.dir/Song.cpp.obj: CMakeFiles/Lab_5.dir/flags.make
+CMakeFiles/Lab_5.dir/Song.cpp.obj: ../Song.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab_5.dir/Song.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab_5.dir\Song.cpp.obj -c "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\Song.cpp"
+
+CMakeFiles/Lab_5.dir/Song.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_5.dir/Song.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\Song.cpp" > CMakeFiles\Lab_5.dir\Song.cpp.i
+
+CMakeFiles/Lab_5.dir/Song.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_5.dir/Song.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\Song.cpp" -o CMakeFiles\Lab_5.dir\Song.cpp.s
+
+CMakeFiles/Lab_5.dir/UtPodDriver.cpp.obj: CMakeFiles/Lab_5.dir/flags.make
+CMakeFiles/Lab_5.dir/UtPodDriver.cpp.obj: ../UtPodDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Lab_5.dir/UtPodDriver.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab_5.dir\UtPodDriver.cpp.obj -c "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\UtPodDriver.cpp"
+
+CMakeFiles/Lab_5.dir/UtPodDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_5.dir/UtPodDriver.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\UtPodDriver.cpp" > CMakeFiles\Lab_5.dir\UtPodDriver.cpp.i
+
+CMakeFiles/Lab_5.dir/UtPodDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_5.dir/UtPodDriver.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\UtPodDriver.cpp" -o CMakeFiles\Lab_5.dir\UtPodDriver.cpp.s
 
 # Object files for target Lab_5
 Lab_5_OBJECTS = \
-"CMakeFiles/Lab_5.dir/main.cpp.obj"
+"CMakeFiles/Lab_5.dir/UtPod.cpp.obj" \
+"CMakeFiles/Lab_5.dir/Song.cpp.obj" \
+"CMakeFiles/Lab_5.dir/UtPodDriver.cpp.obj"
 
 # External object files for target Lab_5
 Lab_5_EXTERNAL_OBJECTS =
 
-Lab_5.exe: CMakeFiles/Lab_5.dir/main.cpp.obj
+Lab_5.exe: CMakeFiles/Lab_5.dir/UtPod.cpp.obj
+Lab_5.exe: CMakeFiles/Lab_5.dir/Song.cpp.obj
+Lab_5.exe: CMakeFiles/Lab_5.dir/UtPodDriver.cpp.obj
 Lab_5.exe: CMakeFiles/Lab_5.dir/build.make
 Lab_5.exe: CMakeFiles/Lab_5.dir/linklibs.rsp
 Lab_5.exe: CMakeFiles/Lab_5.dir/objects1.rsp
 Lab_5.exe: CMakeFiles/Lab_5.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Lab_5.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Shania Paul\Documents\Shania\EE312\Lab 5\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Lab_5.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Lab_5.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

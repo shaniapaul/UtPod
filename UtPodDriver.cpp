@@ -36,6 +36,16 @@ int main(int argc, char *argv[])
 
     t.showSongList();
 
+    if(s1>s2){
+        cout << s1.getTitle() << " is greater than " << s2.getTitle() << endl;
+    }
+    if(s1<s2){
+        cout << s1.getTitle() << " is less than " << s2.getTitle() << endl;
+    }
+    if(s1==s2){
+        cout << s1.getTitle() << " is equal to " << s2.getTitle() << endl;
+    }
+
     Song s3("Beatles", "Hey Jude3", 6);
     result = t.addSong(s3);
     cout << "result = " << result << endl;
