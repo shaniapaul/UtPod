@@ -13,3 +13,32 @@ Song::Song(string const &a, string const &t, int s) {
 bool Song::operator==(Song const &other) {
     return artist == other.artist && title == other.title && size == other.size;
 }
+
+bool Song::operator >(Song const &rhs) {
+    //song1>song2 greater than
+    bool checkGreater = false;
+    if (artist > rhs.artist)  {
+        checkGreater = true;
+    }
+    else if (artist == rhs.artist & title > rhs.title) {
+        checkGreater = true;
+    }
+    else if (artist == rhs.artist & title == rhs.title & size > rhs.size) {
+        checkGreater = true;
+    }
+    return checkGreater;
+}
+bool Song::operator <(Song const &rhs) {
+    //song1<song2 greater than
+    bool checkGreater = false;
+    if (artist < rhs.artist)  {
+        checkGreater = true;
+    }
+    else if (artist == rhs.artist & title < rhs.title) {
+        checkGreater = true;
+    }
+    else if (artist == rhs.artist & title == rhs.title & size < rhs.size) {
+        checkGreater = true;
+    }
+    return checkGreater;
+}
