@@ -10,12 +10,6 @@ Song::Song(string const &a, string const &t, int s) {
     size = s;
 }
 
-Song::Song() {
-    title = "";
-    artist = "";
-    size = 0;
-}
-
 bool Song::operator==(Song const &other) {
     return artist == other.artist && title == other.title && size == other.size;
 }
