@@ -13,3 +13,11 @@ Song::Song(string const &a, string const &t, int s) {
 bool Song::operator==(Song const &other) {
     return artist == other.artist && title == other.title && size == other.size;
 }
+
+bool Song::operator<(Song const &other){
+
+}
+
+bool Song::operator>(Song const &other){
+
+}
