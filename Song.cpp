@@ -30,15 +30,15 @@ bool Song::operator >(Song const &rhs) {
 }
 bool Song::operator <(Song const &rhs) {
     //song1<song2 greater than
-    bool checkGreater = false;
+    bool checkLess = false;
     if (artist < rhs.artist)  {
-        checkGreater = true;
+        checkLess = true;
     }
     else if (artist == rhs.artist & title < rhs.title) {
-        checkGreater = true;
+        checkLess = true;
     }
     else if (artist == rhs.artist & title == rhs.title & size < rhs.size) {
-        checkGreater = true;
+        checkLess = true;
     }
-    return checkGreater;
+    return checkLess;
 }
