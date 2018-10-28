@@ -24,13 +24,17 @@ int main(int argc, char *argv[])
 {
     UtPod t;
 
+    Song s2("Beatles", "Hey Jude2", 5);
+    int result = t.removeSong(s2);
+    cout << "result = " << result << endl;
+
     Song s1("Beatles", "Hey Jude1", 4);
-    int result = t.addSong(s1);
+    result = t.addSong(s1);
     cout << "result = " << result << endl;
 
     t.showSongList();
 
-    Song s2("Beatles", "Hey Jude2", 5);
+    //Song s2("Beatles", "Hey Jude2", 5);
     result = t.addSong(s2);
     cout << "result = " << result << endl;
 

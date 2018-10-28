@@ -39,14 +39,29 @@ int UtPod::addSong(Song const &s) { //return success or no memory
 int UtPod::removeSong(Song const &s) { //returns success or not found
     SongNode *current = songs;
     SongNode *trail = NULL;
-    bool result = NOT_FOUND;
-    while (current != NULL) {
-        if (current->s.getTitle() == s.getTitle() & current->s.getArtist() == s.getArtist() & current->s.getSize() == s.getSize()) {
-
-        }
-        current = current->next;
+    int result = NOT_FOUND;
+    if (current != NULL && current->s.getTitle() == s.getTitle() && current->s.getArtist() == s.getArtist() && current->s.getSize() == s.getSize()) {
+        songs = current->next;
+        delete current;
+        result = SUCCESS;
     }
- return SUCCESS;
+
+    else {
+        while (current != NULL && result != SUCCESS) {
+            trail = current;
+            current = current->next;
+
+            if (current->s.getTitle() == s.getTitle() & current->s.getArtist() == s.getArtist() & current->s.getSize() == s.getSize()) {
+                trail->next = current->next;
+                delete current;
+                result = SUCCESS;
+            }
+            //trail = current;
+            //current = current->next;
+        }
+    }
+    return result;
+
 }
 
 void UtPod::showSongList() {
