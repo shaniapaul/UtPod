@@ -2,8 +2,12 @@
 // Created by Shania Paul on 10/24/2018.
 //
 
-#include "UtPod.h"
+#include <cstdlib>
+#include <iostream>
 #include "Song.h"
+#include "UtPod.h"
+
+using namespace std;
 
 UtPod::UtPod() {
     songs = NULL;  //the head pointer is initially null
@@ -42,9 +46,7 @@ int UtPod::removeSong(Song const &s) { //returns success or not found
         }
         current = current->next;
     }
-}
-return SUCCESS;
-
+ return SUCCESS;
 }
 
 void UtPod::showSongList() {
@@ -67,4 +69,8 @@ int UtPod::getRemainingMemory() { //should add memory for all songs and subtract
         current = current->next;
     }
     return remainingMem;
+}
+
+UtPod::~UtPod() {
+
 }

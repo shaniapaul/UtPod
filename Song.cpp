@@ -10,6 +10,14 @@ Song::Song(string const &a, string const &t, int s) {
     size = s;
 }
 
+Song::Song() {
+    artist = "";
+    title = "";
+    size = 0;
+}
+
+
+
 bool Song::operator==(Song const &other) {
     return artist == other.artist && title == other.title && size == other.size;
 }
@@ -29,12 +37,16 @@ bool Song::operator >(Song const &rhs) {
     return checkGreater;
 }
 bool Song::operator <(Song const &rhs) {
+
     //song1<song2 less than
     bool checkLess = false;
     if (artist < rhs.artist)  {
         checkLess = true;
     }
     else if (artist == rhs.artist && title < rhs.title) {
+        checkLess = true;
+    }
+    else if (artist == rhs.artist && title == rhs.title & size < rhs.size) {
         checkLess = true;
     }
     else if (artist == rhs.artist && title == rhs.title && size < rhs.size) {

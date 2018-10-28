@@ -16,6 +16,7 @@ private:
     int size;
 public:
     Song(string const &a, string const &t, int s);
+    Song();
     void setArtist(string const &a){
         artist = a;
     }
@@ -31,7 +32,7 @@ public:
     void setSize(int s){
         size = s;
     }
-    int getSize(){
+    int getSize()const{
         return size;
     }
 
@@ -41,7 +42,6 @@ public:
 
     bool operator>(Song const &other);
 
-    ~Song();
 };
 
 #endif //LAB_5_SONG_H
