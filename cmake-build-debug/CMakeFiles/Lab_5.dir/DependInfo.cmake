@@ -4,9 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Shania Paul/Documents/Shania/EE312/Lab 5/main.cpp" "C:/Users/Shania Paul/Documents/Shania/EE312/Lab 5/cmake-build-debug/CMakeFiles/Lab_5.dir/main.cpp.obj"
+  "/Users/ayesha/Documents/GitHub/UtPod/Song.cpp" "/Users/ayesha/Documents/GitHub/UtPod/cmake-build-debug/CMakeFiles/Lab_5.dir/Song.cpp.o"
+  "/Users/ayesha/Documents/GitHub/UtPod/UtPod.cpp" "/Users/ayesha/Documents/GitHub/UtPod/cmake-build-debug/CMakeFiles/Lab_5.dir/UtPod.cpp.o"
+  "/Users/ayesha/Documents/GitHub/UtPod/UtPodDriver.cpp" "/Users/ayesha/Documents/GitHub/UtPod/cmake-build-debug/CMakeFiles/Lab_5.dir/UtPodDriver.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

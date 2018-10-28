@@ -35,6 +35,8 @@ public:
         return size;
     }
 
+    Song();
+
     bool operator==(Song const &other);
 
     bool operator<(Song const &other);
