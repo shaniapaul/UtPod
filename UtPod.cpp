@@ -86,6 +86,49 @@ int UtPod::getRemainingMemory() { //should add memory for all songs and subtract
     return remainingMem;
 }
 
+int UtPod::countSongs() {
+    int count = 0;
+    SongNode *current = songs;
+    while (current != NULL) {
+        count++;
+        current = current->next;
+    }
+    return count;
+}
+void UtPod::shuffle() {
+    srand(time(NULL)); //random seed for generator
+    int num = countSongs(); //used as modulus
+    //cout<<"this is the count: "<<num<<endl;
+
+    for (int j = 0; j < num; j++) {
+        int node1 = rand() % num;
+        int node2 = rand() % num; //two random nodes
+
+        SongNode *ptr1 = songs;
+        SongNode *ptr2 = songs;
+
+        for (int i = 1; i < node1; i++) { //starting at 1 because songs is first node
+            ptr1 = ptr1->next; //should end up at node1
+        }
+
+        for (int i = 1; i < node2; i++) { //starting at 1 because songs is first node
+            ptr2 = ptr2->next; //should end up at node1
+        }
+
+        Song temp = ptr1->s; //save 1 song
+        ptr1->s = ptr2->s; //swap
+        ptr2->s = temp;
+    }
+}
+
 UtPod::~UtPod() {
+    cout<<"This is the destructor"<<endl;
+    SongNode *current = songs;
+    SongNode *temp;
+    while (current != NULL) {
+        current = current->next;
+        temp = current;
+        delete temp;
+    }
 
 }

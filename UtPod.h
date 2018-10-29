@@ -27,6 +27,8 @@ private:
 
     int memSize;
 
+    int countSongs();
+
 public:
     UtPod();
     UtPod(int size);
