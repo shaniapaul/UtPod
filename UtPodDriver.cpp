@@ -64,6 +64,15 @@ int main(int argc, char *argv[])
 
     t.showSongList();
 
+    cout << "shuffle result:" << endl;
+    t.shuffle();
+    t.showSongList();
+
+    cout << "sort result:" << endl;
+    t.sortSongList();
+    t.showSongList();
+
+
     result = t.removeSong(s2);
     cout << "delete result = " << result << endl;
 

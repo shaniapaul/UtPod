@@ -6,6 +6,8 @@
 #include <iostream>
 #include "Song.h"
 #include "UtPod.h"
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -78,7 +80,7 @@ void UtPod::showSongList() {
 
 int UtPod::getRemainingMemory() { //should add memory for all songs and subtract from memSize
     SongNode *current = songs;
-    int remainingMem = memSize;
+    int remainingMem = getTotalMemory();
     while (current != NULL) {
         remainingMem = remainingMem - current->s.getSize(); //subtracts size of each song
         current = current->next;
@@ -121,13 +123,38 @@ void UtPod::shuffle() {
     }
 }
 
+void UtPod::sortSongList(){
+    SongNode *start = songs;
+    SongNode *current;
+    SongNode *best;
+
+    while(start != NULL){
+        //cout << "made it to outer loop" << endl;
+        current = start;
+        best = start;
+        while(current != NULL){
+            //cout << "made it to inner loop" << endl;
+            if(current->s < best->s){
+                best = current;
+            }
+            current = current->next;
+        }
+        Song temp = start->s; //save 1 song
+        start->s = best->s; //swap
+        best->s = temp;
+
+        start = start->next;
+    }
+
+}
+
 UtPod::~UtPod() {
     cout<<"This is the destructor"<<endl;
     SongNode *current = songs;
     SongNode *temp;
     while (current != NULL) {
-        current = current->next;
         temp = current;
+        current = current->next;
         delete temp;
     }
 
