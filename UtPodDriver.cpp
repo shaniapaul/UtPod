@@ -24,11 +24,11 @@ int main(int argc, char *argv[])
 {
     UtPod t;
 
-    Song s2("Beatles", "Hey Jude2", 5);
+    Song s2("Jackson 5", "ABC", 5);
     int result = t.removeSong(s2);
     cout << "result = " << result << endl;
 
-    Song s1("Beatles", "Hey Jude1", 4);
+    Song s1("Michael Jackson", "Billie Jean", 4);
     result = t.addSong(s1);
     cout << "result = " << result << endl;
 
@@ -50,15 +50,15 @@ int main(int argc, char *argv[])
         cout << s1.getTitle() << " is equal to " << s2.getTitle() << endl;
     }
 
-    Song s3("Beatles", "Hey Jude3", 6);
+    Song s3("Elvis Presley", "Suspicious Minds", 6);
     result = t.addSong(s3);
     cout << "result = " << result << endl;
 
-    Song s4("Beatles", "Hey Jude4", 7);
+    Song s4("Stevie Wonder", "Higher Ground", 7);
     result = t.addSong(s4);
     cout << "result = " << result << endl;
 
-    Song s5("Beatles", "Hey Jude5", 241);
+    Song s5("Madonna", "Material Girl", 241);
     result = t.addSong(s5);
     cout << "add result = " << result << endl;
 

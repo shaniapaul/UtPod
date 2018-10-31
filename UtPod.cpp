@@ -76,7 +76,7 @@ void UtPod::showSongList() {
     SongNode *current = songs;
     int count = 1; //for output formal
     while (current != NULL) {
-        cout<<count<<". "<<current->s.getTitle()<< ", "<<current->s.getArtist()<<", "<<current->s.getSize()
+        cout<<count<<". "<<current->s.getArtist()<< ", "<<current->s.getTitle()<<", "<<current->s.getSize()
             <<" MB"<<endl;
         current = current->next;
         count++;
