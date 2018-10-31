@@ -18,7 +18,12 @@ UtPod::UtPod() {
 
 UtPod::UtPod(int size) {
     songs = NULL;
-    memSize = size;
+    if (size > 0 && size <= MAX_MEMORY) {
+        memSize = size;
+    }
+    else {
+        memSize = MAX_MEMORY;
+    }
 }
 int UtPod::addSong(Song const &s) { //return success or no memory
     //SongNode *temp = new SongNode *;
