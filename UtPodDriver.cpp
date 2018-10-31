@@ -23,6 +23,11 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     UtPod t;
+    UtPod p1(128);
+
+    cout << "Testing getTotalMemory"<<endl;
+    cout << "memory of t = " << t.getTotalMemory() <<endl;
+    cout << "memory of p1 = " << p1.getTotalMemory() <<endl;
 
     Song s2("Jackson 5", "ABC", 5);
     int result = t.removeSong(s2);
