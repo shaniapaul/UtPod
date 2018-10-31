@@ -32,6 +32,10 @@ int main(int argc, char *argv[])
     result = t.addSong(s1);
     cout << "result = " << result << endl;
 
+    Song s6("Michael Jackson", "Thriller", 4);
+    result = t.addSong(s6);
+    cout << "result = " << result << endl;
+
     t.showSongList();
 
     //Song s2("Beatles", "Hey Jude2", 5);
@@ -54,6 +58,10 @@ int main(int argc, char *argv[])
     result = t.addSong(s3);
     cout << "result = " << result << endl;
 
+    Song s8("Elvis Presley", "Suspicious Minds", 6);
+    result = t.addSong(s8);
+    cout << "result = " << result << endl;
+
     Song s4("Stevie Wonder", "Higher Ground", 7);
     result = t.addSong(s4);
     cout << "result = " << result << endl;
@@ -62,13 +70,17 @@ int main(int argc, char *argv[])
     result = t.addSong(s5);
     cout << "add result = " << result << endl;
 
+    Song s7("Madonna", "Material Girl", 50);
+    result = t.addSong(s7);
+    cout << "add result = " << result << endl;
+
     t.showSongList();
 
-    cout << "shuffle result:" << endl;
+    cout << "shuffle songs:" << endl;
     t.shuffle();
     t.showSongList();
 
-    cout << "sort result:" << endl;
+    cout << "sort songs:" << endl;
     t.sortSongList();
     t.showSongList();
 
@@ -97,7 +109,7 @@ int main(int argc, char *argv[])
     cout << "add result = " << result << endl;
 
     t.showSongList();
-    cout << "memory = " << t.getRemainingMemory() << endl;
+    cout << "Remaining memory = " << t.getRemainingMemory() << endl;
 
 
 }
