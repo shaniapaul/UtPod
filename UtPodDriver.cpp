@@ -116,6 +116,31 @@ int main(int argc, char *argv[])
     t.showSongList();
     cout << "Remaining memory = " << t.getRemainingMemory() << endl;
 
+    Song song1("Twinkle","Twinkle Twinkle", 50);
+
+    Song song2("Twinkle","Twinkle Twinkle", 20);
+
+    Song song3("Angela","Twinkle Twinkle", 20);
+
+
+    //p1.addSong(song2);
+    p1.addSong(song3);
+    p1.addSong(song2);
+    p1.addSong(song1);
+    p1.addSong(song2);
+
+    p1.showSongList();
+
+    p1.shuffle();
+    cout << "shuffle result:" << endl;
+    p1.showSongList();
+
+
+    p1.sortSongList();
+    cout << "sort result:" << endl;
+    p1.showSongList();
+
+
 
 }
 
