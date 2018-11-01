@@ -114,7 +114,6 @@ int main(int argc, char *argv[])
     cout << "add result = " << result << endl;
 
     t.showSongList();
-    cout << "Remaining memory = " << t.getRemainingMemory() << endl;
 
     Song song1("Twinkle","Twinkle Twinkle", 50);
 
@@ -140,7 +139,7 @@ int main(int argc, char *argv[])
     cout << "sort result:" << endl;
     p1.showSongList();
 
-
+    cout << "Remaining memory = " << t.getRemainingMemory() << endl;
 
 }
 
