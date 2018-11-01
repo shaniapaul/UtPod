@@ -23,7 +23,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     UtPod t;
-    UtPod p1(128);
+    UtPod p1(256);
 
     cout << "Testing getTotalMemory"<<endl;
     cout << "memory of t = " << t.getTotalMemory() <<endl;
@@ -135,6 +135,59 @@ int main(int argc, char *argv[])
     cout << "shuffle result:" << endl;
     p1.showSongList();
 
+    cout<<"Tests sorting if songs have same artist, same title, or same size"<<endl;
+    p1.sortSongList();
+    cout << "sort result:" << endl;
+    p1.showSongList();
+
+    cout<<"Testing operators"<<endl;
+    if(song1>song2){
+        cout << song1.getTitle() << " is greater than " << song2.getTitle() << endl;
+    }
+    if(song1<song2){
+        cout << song1.getTitle() << " is less than " << song2.getTitle() << endl;
+    }
+    if(song1==song2){
+        cout << song1.getTitle() << " is equal to " << song2.getTitle() << endl;
+    }
+
+    if(song2>song3){
+        cout << song2.getTitle() << " is greater than " << song3.getTitle() << endl;
+    }
+    if(song2<song3){
+        cout << song2.getTitle() << " is less than " << song3.getTitle() << endl;
+    }
+    if(song2==song3){
+        cout << song2.getTitle() << " is equal to " << song3.getTitle() << endl;
+    }
+
+    if (true) {
+        UtPod destruct(64);
+        destruct.showSongList();
+    }
+
+
+    Song song4("Ashley","Happy Birthday", 15);
+
+    Song song5("Olivia","Jingle Bells", 20);
+
+    Song song6("David","Star Spangled Banner", 12);
+
+    Song song7("Ben","Don't Stop Believing", 50);
+
+    Song song8("Hikaru","Imperial March", 35);
+
+    p1.addSong(song4);
+    p1.addSong(song5);
+    p1.addSong(song6);
+    p1.addSong(song7);
+    p1.addSong(song8);
+
+    p1.showSongList();
+
+    p1.shuffle();
+    cout << "shuffle result:" << endl;
+    p1.showSongList();
 
     p1.sortSongList();
     cout << "sort result:" << endl;
