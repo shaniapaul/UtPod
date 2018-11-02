@@ -10,6 +10,7 @@ Song::Song(string const &a, string const &t, int s) {
     size = s;
 }
 
+//default constructor used in making song nodes
 Song::Song() {
     artist = "";
     title = "";
@@ -22,6 +23,7 @@ bool Song::operator==(Song const &other) {
     return artist == other.artist && title == other.title && size == other.size;
 }
 
+//checks each field to determine which song is greater
 bool Song::operator >(Song const &rhs) {
     //song1>song2 greater than
     bool checkGreater = false;
@@ -36,6 +38,8 @@ bool Song::operator >(Song const &rhs) {
     }
     return checkGreater;
 }
+
+//checks each field to determine which song is less
 bool Song::operator <(Song const &rhs) {
 
     //song1<song2 less than

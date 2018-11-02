@@ -16,6 +16,7 @@ UtPod::UtPod() {
     memSize = MAX_MEMORY;
 }
 
+//allows user to set size between 0 and maximum size
 UtPod::UtPod(int size) {
     songs = NULL;
     if (size > 0 && size <= MAX_MEMORY) {
@@ -25,6 +26,8 @@ UtPod::UtPod(int size) {
         memSize = MAX_MEMORY;
     }
 }
+
+
 int UtPod::addSong(Song const &s) { //return success or no memory
     //SongNode *temp = new SongNode *;
     SongNode *temp = new SongNode; //not sure if correct
@@ -47,17 +50,20 @@ int UtPod::removeSong(Song const &s) { //returns success or not found
     SongNode *current = songs;
     SongNode *trail = NULL;
     int result = NOT_FOUND;
+    //case where first node has to be deleted
     if (current != NULL && current->s.getTitle() == s.getTitle() && current->s.getArtist() == s.getArtist() && current->s.getSize() == s.getSize()) {
         songs = current->next;
         delete current;
         result = SUCCESS;
     }
 
+    //when another node has to be deleted
     else {
         while (current != NULL && result != SUCCESS) {
             trail = current;
             current = current->next;
 
+            //checks if all attributes match
             if (current->s.getTitle() == s.getTitle() & current->s.getArtist() == s.getArtist() & current->s.getSize() == s.getSize()) {
                 trail->next = current->next;
                 delete current;
@@ -71,6 +77,7 @@ int UtPod::removeSong(Song const &s) { //returns success or not found
 
 }
 
+//traverses list to print songs
 void UtPod::showSongList() {
     cout<<"Song List"<<endl;
     SongNode *current = songs;
@@ -93,6 +100,7 @@ int UtPod::getRemainingMemory() { //should add memory for all songs and subtract
     return remainingMem;
 }
 
+//helper function for shuffle
 int UtPod::countSongs() {
     int count = 0;
     SongNode *current = songs;
@@ -102,6 +110,8 @@ int UtPod::countSongs() {
     }
     return count;
 }
+
+//reorders songs using random number generator
 void UtPod::shuffle() {
     srand(time(NULL)); //random seed for generator
     int num = countSongs(); //used as modulus
@@ -144,7 +154,7 @@ void UtPod::sortSongList(){
         while(current != NULL){
             //cout << "made it to inner loop" << endl;
             if(current->s < best->s){
-                best = current;
+                best = current; //finds song that is closest to beginning of alphabet
             }
             current = current->next;
         }
@@ -163,7 +173,7 @@ void UtPod::clearMemory(){
     while (current != NULL) {
         temp = current;
         current = current->next;
-        delete temp;
+        delete temp;  //memory that's allocated has to be returned
     }
 
 }
