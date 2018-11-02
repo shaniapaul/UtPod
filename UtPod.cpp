@@ -169,6 +169,6 @@ void UtPod::clearMemory(){
 }
 
 UtPod::~UtPod() {
-    cout<<"This is the destructor"<<endl;
+    //cout<<"This is the destructor"<<endl;
     clearMemory();
 }
