@@ -1,8 +1,7 @@
 //
-// Created by Shania Paul on 10/24/2018.
+// Created by Shania Paul and Ayesha Rahman on 10/24/2018.
 //
 
-//DOCUMENT HERE
 
 #ifndef UTPOD_H
 #define UTPOD_H
@@ -44,6 +43,8 @@ public:
     }
 
     int getRemainingMemory();
+
+    void clearMemory();
 
     ~UtPod();
 

@@ -1,6 +1,6 @@
 //
-// Created by Shania Paul on 10/24/2018.
-//Ayesha Rahman 10/25/18
+// Created by Shania Paul and Ayesha Rahman on 10/24/2018.
+//
 
 /* utPod_driver.cpp
 Demo Driver for the UtPod.
@@ -29,47 +29,47 @@ int main(int argc, char *argv[])
     cout << "memory of t = " << t.getTotalMemory() <<endl;
     cout << "memory of p1 = " << p1.getTotalMemory() <<endl;
 
+    cout << "\nTesting Removing Song from Empty Song List"<<endl;
     Song s2("Jackson 5", "ABC", 5);
     int result = t.removeSong(s2);
-    cout << "result = " << result << endl;
+    cout << "delete result = " << result << endl;
 
     Song s1("Michael Jackson", "Billie Jean", 4);
     result = t.addSong(s1);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
+
+    t.shuffle();
+
+    cout << "\nTesting shuffle of only 1 song"<<endl;
+    t.showSongList();
 
     Song s6("Michael Jackson", "Thriller", 4);
     result = t.addSong(s6);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
 
+    t.sortSongList();
+
+    cout << "\nTesting sort of only 2 songs"<<endl;
     t.showSongList();
+
+    cout << "Remaining memory = " << t.getRemainingMemory() << endl;
 
     //Song s2("Beatles", "Hey Jude2", 5);
     result = t.addSong(s2);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
 
-    t.showSongList();
-
-    if(s1>s2){
-        cout << s1.getTitle() << " is greater than " << s2.getTitle() << endl;
-    }
-    if(s1<s2){
-        cout << s1.getTitle() << " is less than " << s2.getTitle() << endl;
-    }
-    if(s1==s2){
-        cout << s1.getTitle() << " is equal to " << s2.getTitle() << endl;
-    }
 
     Song s3("Elvis Presley", "Suspicious Minds", 6);
     result = t.addSong(s3);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
 
     Song s8("Elvis Presley", "Suspicious Minds", 6);
     result = t.addSong(s8);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
 
     Song s4("Stevie Wonder", "Higher Ground", 7);
     result = t.addSong(s4);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
 
     Song s5("Madonna", "Material Girl", 241);
     result = t.addSong(s5);
@@ -79,7 +79,16 @@ int main(int argc, char *argv[])
     result = t.addSong(s7);
     cout << "add result = " << result << endl;
 
+    cout << "\nTesting add song with not enough memory"<<endl;
+
+    Song s9("Madonna", "Material Girl", 250);
+    result = t.addSong(s9);
+    cout << "add result = " << result << endl;
+
     t.showSongList();
+    cout << "Remaining memory = " << t.getRemainingMemory() << endl;
+
+    cout << "\nTesting sort and shuffle of repeat songs, and same songs with different size or title"<<endl;
 
     cout << "shuffle songs:" << endl;
     t.shuffle();
@@ -109,11 +118,13 @@ int main(int argc, char *argv[])
 
 
     t.showSongList();
+    cout << "Remaining memory = " << t.getRemainingMemory() << endl;
 
     result = t.addSong(s5);
     cout << "add result = " << result << endl;
 
     t.showSongList();
+    cout << "Remaining memory = " << t.getRemainingMemory() << endl;
 
     Song song1("Twinkle","Twinkle Twinkle", 50);
 
@@ -122,24 +133,31 @@ int main(int argc, char *argv[])
     Song song3("Angela","Twinkle Twinkle", 20);
 
 
-    //p1.addSong(song2);
-    p1.addSong(song3);
-    p1.addSong(song2);
-    p1.addSong(song1);
-    p1.addSong(song2);
+    cout << "\nTesting second UtPod with 256 MB"<<endl;
+    result = p1.addSong(song3);
+    cout << "add result = " << result << endl;
+    result = p1.addSong(song2);
+    cout << "add result = " << result << endl;
+    result = p1.addSong(song1);
+    cout << "add result = " << result << endl;
+    result = p1.addSong(song2);
+    cout << "add result = " << result << endl;
 
+    cout << "\nTesting add song twice"<<endl;
     p1.showSongList();
+
+    cout << "Remaining memory = " << p1.getRemainingMemory() << endl;
 
     p1.shuffle();
     cout << "shuffle result:" << endl;
     p1.showSongList();
 
-    cout<<"Tests sorting if songs have same artist, same title, or same size"<<endl;
+    cout<<"\nTests sorting if songs have same artist, same title, or same size"<<endl;
     p1.sortSongList();
     cout << "sort result:" << endl;
     p1.showSongList();
 
-    cout<<"Testing operators"<<endl;
+    cout<<"\nTesting operators"<<endl;
     if(song1>song2){
         cout << song1.getTitle() << " is greater than " << song2.getTitle() << endl;
     }
@@ -160,11 +178,6 @@ int main(int argc, char *argv[])
         cout << song2.getTitle() << " is equal to " << song3.getTitle() << endl;
     }
 
-    if (true) {
-        UtPod destruct(64);
-        destruct.showSongList();
-    }
-
 
     Song song4("Ashley","Happy Birthday", 15);
 
@@ -176,11 +189,16 @@ int main(int argc, char *argv[])
 
     Song song8("Hikaru","Imperial March", 35);
 
-    p1.addSong(song4);
-    p1.addSong(song5);
-    p1.addSong(song6);
-    p1.addSong(song7);
-    p1.addSong(song8);
+    result = p1.addSong(song4);
+    cout << "add result = " << result << endl;
+    result = p1.addSong(song5);
+    cout << "add result = " << result << endl;
+    result = p1.addSong(song6);
+    cout << "add result = " << result << endl;
+    result = p1.addSong(song7);
+    cout << "add result = " << result << endl;
+    result = p1.addSong(song8);
+    cout << "add result = " << result << endl;
 
     p1.showSongList();
 
@@ -192,7 +210,7 @@ int main(int argc, char *argv[])
     cout << "sort result:" << endl;
     p1.showSongList();
 
-    cout << "Remaining memory = " << t.getRemainingMemory() << endl;
+    cout << "Remaining memory = " << p1.getRemainingMemory() << endl;
 
 }
 
